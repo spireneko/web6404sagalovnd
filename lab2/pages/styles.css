@@ -19,7 +19,7 @@ nav {
     padding: 20px;
 }
 
-.nav-list {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -27,7 +27,15 @@ nav {
     gap: 20px;
 }
 
-.nav-list a {
+nav li {
+    border-bottom: solid transparent 1px;
+}
+
+nav li:hover {
+    border-bottom: solid black 1px;
+}
+
+nav a {
     text-decoration: none;
     color: inherit;
 }
