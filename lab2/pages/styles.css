@@ -35,6 +35,9 @@ nav {
 
 .content {
     flex: 1;
+    align-self: center;
+    width: 50%;
+    margin: 0 auto;
     hyphens: auto;
 }
 
