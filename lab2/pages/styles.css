@@ -1,6 +1,15 @@
+html {
+    height: 100%;
+}
+
 body {
-    background-color: white;
+    height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    font-size: large;
 }
 
 nav {
@@ -22,4 +31,34 @@ nav {
 .nav-list a {
     text-decoration: none;
     color: inherit;
+}
+
+.content {
+    flex: 1;
+    hyphens: auto;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: x-large;
+}
+
+.socials {
+    display: flex;
+    gap: 13px;
+}
+
+.socials img {
+    height: 40px;
+}
+
+.github-icon {
+    filter: invert();
 }
