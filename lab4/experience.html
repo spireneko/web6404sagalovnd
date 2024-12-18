@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐈</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="experience.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">О себе</a></li>
+            <li><a href="technologies.html">Технологии</a></li>
+            <li><a href="experience.html">Опыт работы</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="jobs-grid" id="cards-grid">
+            <div class="job-card">Job #1</div>
+            <div class="job-card">Job #2</div>
+            <div class="job-card">Job #3</div>
+            <div class="job-card">Job #4</div>
+            <div class="job-card">Job #5</div>
+            <div class="job-card">Job #6</div>
+            <div class="job-card">Job #7</div>
+            <div class="job-card">Job #8</div>
+            <div class="job-card">Job #9</div>
+            <div class="job-card">Job #10</div>
+            <div class="job-card">Job #11</div>
+        </div>
+
+        <h3>Хотите стать одним из них? Просто оставьте свои контактные данные!</h3>
+        <form action="http://localhost:8000" method="POST" id="useless-form">
+            <label>
+                ФИО
+                <input type="text" name="name" id="name" required>
+                <span id="name-error" style="color: red;"></span>
+            </label>
+
+            <label>
+                Почта
+                <input type="text" name="email" id="email" required>
+                <span id="email-error" style="color: red;"></span>
+            </label>
+
+            <button type="submit">Отправить</button>
+        </form>
+        <p id="status-message"></p>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            © 2024 Сагалов Никита
+        </div>
+        <div class="socials">
+            <a href="https://github.com/spireneko" title="Github">
+                <img class="github-icon"
+                    src="https://raw.githubusercontent.com/github/docs/0386e2308f2b802ac5ba8b2f2746e98709d9c407/assets/images/site/favicon.svg"
+                    alt="Github">
+            </a>
+
+            <a href="https://t.me/spireneko" title="Telegram"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/240px-Telegram_2019_Logo.svg.png"
+                    alt="Telegram"></img>
+            </a>
+        </div>
+    </footer>
+
+    <script src="experience.js"></script>
+</body>
+
+</html>

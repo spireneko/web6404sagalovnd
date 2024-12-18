@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+.container-vertical-centered {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    justify-self: start;
+}
+
+.container-vertical-centered a {
+    text-decoration: none;
+    color: rgb(0, 102, 204);
+}
