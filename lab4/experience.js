@@ -5,9 +5,13 @@ const nameError = document.getElementById('name-error');
 const emailError = document.getElementById('email-error');
 const statusMessage = document.getElementById('status-message');
 
+const cardsGrid = document.getElementById('cards-grid')
+
 
 let goodName = false;
 let goodEmail = false;
+
+let jobCards;
 
 
 nameInput.addEventListener('input', () => {
@@ -66,3 +70,30 @@ form.addEventListener('submit', async (event) => {
         statusMessage.style.color = 'red';
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('http://localhost:8000', {
+            method: 'GET'
+        });
+
+        if (response.ok) {
+            console.log('Загрузка jobs: OK');
+            jobCards = await response.json();
+            console.log(jobCards);
+            jobCards = jobCards.map(job => {
+                const div = document.createElement('div');
+                div.className = 'job-card';
+                div.textContent = job;
+                return div;
+            });
+            cardsGrid.replaceChildren(...jobCards);
+        } else {
+            console.log('Загрузка jobs: NE OK');
+        }
+    } catch (error) {
+        console.log('Ошибка подключения к серверу при загрузке jobs: :\n', error);
+    }
+});
+
