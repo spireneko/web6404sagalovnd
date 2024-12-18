@@ -1,0 +1,66 @@
+:root {
+    --shadow-initial: rgba(0, 0, 0, 0.2);
+    --shadow-hover: rgba(0, 0, 0, 0.3);
+
+    --scale-hover: 1.05;
+
+    --animation-speed: 0.3s;
+}
+
+.jobs-grid {
+    display: grid;
+    row-gap: 24px;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 30px 0;
+}
+
+.job-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 6px var(--shadow-initial);
+    transform: translateY(0) scale(1);
+
+    transition: transform var(--animation-speed) ease,
+        box-shadow var(--animation-speed) ease;
+}
+
+.job-card:hover {
+    animation: lift-up var(--animation-speed) ease forwards;
+}
+
+.job-card:not(:hover) {
+    animation: return-down var(--animation-speed) ease forwards;
+}
+
+@keyframes lift-up {
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 6px var(--shadow-initial);
+    }
+
+    100% {
+        transform: translateY(-10px) scale(var(--scale-hover));
+        box-shadow: 0 10px 20px var(--shadow-hover);
+    }
+}
+
+@keyframes return-down {
+    0% {
+        transform: translateY(-10px) scale(var(--scale-hover));
+        box-shadow: 0 10px 20px var(--shadow-hover);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 6px var(--shadow-initial);
+    }
+}
