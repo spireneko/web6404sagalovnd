@@ -37,20 +37,22 @@
         </div>
 
         <h3>Хотите стать одним из них? Просто оставьте свои контактные данные!</h3>
-        <form action="" id="useless-form">
+        <form action="http://localhost:8000" method="POST" id="useless-form">
             <label>
                 ФИО
-                <input type="text" name="" id="name" required>
+                <input type="text" name="name" id="name" required>
+                <span id="name-error" style="color: red;"></span>
             </label>
-            <span id="nameError" style="color: red;"></span>
 
             <label>
                 Почта
-                <input type="text" name="" id="email" required>
+                <input type="text" name="email" id="email" required>
+                <span id="email-error" style="color: red;"></span>
             </label>
 
             <button type="submit">Отправить</button>
         </form>
+        <p id="status-message"></p>
     </div>
 
     <footer>
